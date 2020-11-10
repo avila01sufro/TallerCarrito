@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class metodos {
     public static void main(String[] args){
-        crearArray();
+        crearArrays();
     }
 
-    public static void crearArray() {
+    public static void crearArrays() {
         Random rand = new Random();
         int longArreglo;
         do {
@@ -16,11 +16,12 @@ public class metodos {
 
         int[] productos = new int[longArreglo];
         int[] cantidad = new int[longArreglo];
+        int[] totalProductos = new int[longArreglo];
 
-        crearProductos(productos, cantidad);
+        crearProductos(productos, cantidad, totalProductos);
     }
 
-    public static void crearProductos(int[] productos, int[] cantidad) {
+    public static void crearProductos(int[] productos, int[] cantidad, int[] totalProductos) {
 
         for (int i = 0; i < productos.length; i++){
 
@@ -38,8 +39,13 @@ public class metodos {
             cantidad[i] = rand2.nextInt(15);
         }
 
+        for (int i = 0; i < productos.length; i++){
+            totalProductos[i] = (productos[i] * cantidad[i]);
+        }
+
         cantidadProductos(cantidad);
         costoTotal(productos);
+        detalle(productos, cantidad,totalProductos);
     }
 
     public static void cantidadProductos(int[] cantidad) {
@@ -59,5 +65,9 @@ public class metodos {
             costoTotal = costoTotal+productos[i];
         }
         System.out.println("El costo total es de $" +costoTotal);
+    }
+
+    public static void detalle(int[] productos, int[]cantidad, int[] totalProductos){
+
     }
 }
