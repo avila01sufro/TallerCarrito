@@ -64,6 +64,8 @@ public class metodos {
     }
 
     public static void detalle(int[] productos, int[]cantidad, int[] totalProductos){
-
+        for (int i = 0; i < productos.length; i++){
+            System.out.println("Cantidad producto ["+i+"]:"+ cantidad[i]+ ", Subtotal: $"+(productos[i]*cantidad[i]));
+        }
     }
 }
