@@ -29,10 +29,6 @@ public class metodos {
             productos[i] = (500+multip);
         }
 
-        for (int i = 0; i < productos.length; i++) {
-            System.out.println(productos[i]);
-        }
-
         Random rand2 = new Random();
 
         for (int i = 0; i < cantidad.length; i++){
@@ -45,7 +41,7 @@ public class metodos {
 
         cantidadProductos(cantidad);
         costoTotal(productos);
-        detalle(productos, cantidad,totalProductos);
+        detalle(productos, cantidad, totalProductos);
     }
 
     public static void cantidadProductos(int[] cantidad) {
